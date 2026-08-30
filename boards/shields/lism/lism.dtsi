@@ -154,10 +154,26 @@
     };
 
     // セントラルのためのリスナー（後でdeviceを割当）
-    central_listener: central_listener {
-        compatible = "zmk,input-listener";
-        status = "disabled";
+    //central_listener: central_listener {
+        //compatible = "zmk,input-listener";
+        //status = "disabled";
+    //};
+central_listener: central_listener {
+    compatible = "zmk,input-listener";
+    status = "disabled";
+
+    input-processors = <
+        &mouse_runtime_input_processor
+    >;
+
+    scroll_layer {
+        layers = <5>;
+        input-processors = <
+            &zip_xy_to_scroll_mapper
+            &scroll_runtime_input_processor
+        >;
     };
+};
 
     /* 充電ステータス */
     chg_stat: chg_stat {
