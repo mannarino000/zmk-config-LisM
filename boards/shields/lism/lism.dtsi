@@ -163,9 +163,9 @@ central_listener: central_listener {
     status = "disabled";
     device = <&trackball_split>;
 
-    input-processors = <
-        &mouse_runtime_input_processor
-    >;
+    //input-processors = <
+        //&mouse_runtime_input_processor
+    //>;
 
     scroll_layer {
         layers = <5>;
