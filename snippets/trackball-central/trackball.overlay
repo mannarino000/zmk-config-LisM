@@ -1,5 +1,5 @@
 #include "../lism-input-processors.dtsi"
-#include <dt-bindings/zmk/input_transform.h>
+//#include <dt-bindings/zmk/input_transform.h>
 
 / {
     chosen {
@@ -36,6 +36,13 @@
     input-processors = 
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) 
          &mouse_runtime_input_processor_central>;
+
+    scroller {
+        layers = <5>;
+        input-processors = <
+            &zip_xy_to_scroll_mapper
+        >;
+    };
 };
 
 &scroll_runtime_input_processor {
@@ -44,12 +51,12 @@
 		xy-to-scroll-enabled;
 };
 
-&trackball_listener {
-    scroller {
-        layers = <5>;
-        input-processors = <
-            &zip_xy_to_scroll_mapper
-        >;
-    };
-};
+//&trackball_listener {
+    //scroller {
+        //layers = <5>;
+        //input-processors = <
+            //&zip_xy_to_scroll_mapper
+        //>;
+    //};
+//};
 
