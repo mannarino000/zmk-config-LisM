@@ -161,6 +161,7 @@
 central_listener: central_listener {
     compatible = "zmk,input-listener";
     status = "disabled";
+    device = <&trackball_split>;
 
     input-processors = <
         &mouse_runtime_input_processor
