@@ -10,11 +10,11 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &mt {
-    tapping-term-ms = <300>;
+    tapping-term-ms = <200>;
     flavor = "balanced";
 };
 
-&lt { quick-tap-ms = <300>; };
+&lt { quick-tap-ms = <200>; };
 
 &automouse {
     continue-list = <&mkp LCLK &mkp RCLK>;
