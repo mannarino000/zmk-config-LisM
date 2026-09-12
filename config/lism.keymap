@@ -16,8 +16,13 @@
 
 &lt { quick-tap-ms = <300>; flavor = "balanced";};
 
-&automouse {
-    continue-list = <&mkp LCLK &mkp RCLK>;
+//&automouse {
+//    continue-list = <&mkp LCLK &mkp RCLK>;
+//};
+&zip_temp_layer {
+    /* オートマウスレイヤーを解除したくないキーの「ポジション番号」を指定します */
+    /* （例：16番と17番のキーにLCLKやRCLKを割り当てている場合） */
+    excluded-positions = <16 17>;
 };
 
 / {
