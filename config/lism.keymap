@@ -16,6 +16,10 @@
 
 &lt { quick-tap-ms = <300>; };
 
+&automouse {
+    continue-list = <&mkp LCLK &mkp RCLK>;
+};
+
 / {
     macros {
         emoji: emoji_macro {
